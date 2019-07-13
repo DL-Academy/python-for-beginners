@@ -1,0 +1,79 @@
+#LISTS COURSE
+
+# name = [data1, data2, data3]
+
+#animals = ['cat', 'dog', 'bird']
+
+#if 'snakes' in animals:
+#	print("There are cats") 
+
+
+#for i in range(len(animals)):
+#	print(animals[i])
+#animals.insert(0, 'mouse')
+#print(animals)
+
+#animals.remove('cat')
+#print(animals)
+
+#animals.clear()
+#print(animals)
+
+
+array = [1, 2, 3, 4, 5]
+print(array[bv  :])
+
+
+
+#SUDOKU SOLVER COURSE
+
+array = [0, 0, 0, 0, 0, 0, 0, 0, 5]
+array_s = []
+numbers = [] # 1 to 9
+
+for i in range(1, 10, 1):
+	numbers.append(i)
+
+print(numbers)
+
+for j in range(len(array)):
+	if array[j] != 0:
+		array_s.append(array[j])
+
+print(array_s)
+
+for h in array_s:
+	numbers.remove(h)
+
+print(numbers)
+x = 0
+for i in range(len(array)):
+	if array[i] == 0:
+		array[i] = numbers[x]
+		x += 1
+
+print("FINAL ANSWER \n")
+print(array)
+
+
+
+#DICTIONARIES COURSE
+
+import random
+# name = {key : value, key2 : value2, key3 : value3}
+# github 
+# pip
+
+r = random.randint(0, 100)
+
+grades = {'math' : [random.randint(0, 100) for i in range(5)],
+'science' : [random.randint(0, 100) for i in range(5)],
+'english' : [random.randint(0, 100) for i in range(5)] }
+
+total = 0
+print(grades)
+print(grades['math'])
+for grade in grades['math']:
+	total += grade # total = total + grade
+average_math = total / len(grades['math'])
+print(average_math)
