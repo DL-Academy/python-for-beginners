@@ -1,0 +1,53 @@
+#FUNCTIONS COURSE
+
+# def name(param1, param2, param3):
+#	#code
+#   return 
+
+number = 3
+
+def change_number():
+	global number
+	number = 5
+
+change_number()
+print(number)
+
+
+
+#CLASSES AND OBJECTS COURSE
+#main.py
+# class name:
+# 	def __init__(self, param1, parm2):
+		#self.variable1
+		#self.variable2
+
+class Rectangle:
+	def __init__(self, height, width):
+		self.height = height
+		self.width = width
+	def get_perimeter(self):
+		return 2 * self.height + 2 * self.width
+	def get_area(self):
+		return self.height * self.width
+ 
+#rectangle.py
+import rectangle
+
+rect1 = rectangle.Rectangle(2, 3)
+rect2 = rectangle.Rectangle(5, 10)
+
+p = rect1.get_perimeter()
+a = rect1.get_area()
+
+print("Rectangle 1")
+print("parameter is " + str(p) + "\n")
+print("area is " + str(a) + "\n")
+
+print("Rectangle 2")
+
+p = rect2.get_perimeter()
+a = rect2.get_area()
+
+print("parameter is " + str(p) + "\n")
+print("area is " + str(a) + "\n")
