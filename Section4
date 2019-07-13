@@ -1,0 +1,33 @@
+#STRINGS COURSE
+
+fname = 'Ryan'
+mname = 'Tedd'
+lname = 'Jeff'
+
+
+name = '{0}-{2}-{1}'.format(fname, lname, mname) #Ryan Jeff
+print(name)
+print(name.upper())
+print(name.lower())
+print(name[0])
+print(name[-1])
+
+names = name.split("-")
+print(names[0])
+
+#RECURSION COURSE
+#recursion
+# function that calls itself
+
+#n! = (n)(n-1)(n-2)(n-3)...1
+total = 1
+
+def factorial(n):
+	global total
+	if n == 1:
+		return 0
+	else:
+		total *= n # total = total * n
+		return factorial(n-1)
+factorial(999) #4! = 24
+print(total)
